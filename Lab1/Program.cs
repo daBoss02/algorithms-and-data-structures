@@ -63,3 +63,10 @@ if (percent > 25)
 {
     Console.WriteLine("This letter makes up more than 25% of the total number of characters.");
 }
+
+
+/*
+ * What do you think would be the best numeric datatype to store the total count of letters? 
+     * int because no one will enter more than 2,147,483,647 instances of a single letter.
+     * the number of letters will also be a whole number as opposed to a decimal.
+ */ 
