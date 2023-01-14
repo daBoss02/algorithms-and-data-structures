@@ -6,7 +6,9 @@
         If there are multiple words tied for greatest length, print the last one
 */
 
-string testSentence = "Tiptoe through the tulips";
+using System.Text;
+
+string testSentence = "the the who what where where why how how";
 
 // A program that produces an array of all of the characters that appear more than once in a string.
 
@@ -16,6 +18,21 @@ Console.WriteLine("\nProducing an array of repeated characters\n");
 
 Console.WriteLine("\nProducing an array of unique words\n");
 
+string[] allWords = testSentence.Split(' ');
+StringBuilder uniqueWords = new StringBuilder();
+
+foreach (string word in allWords)
+{
+    if (!uniqueWords.ToString().Contains(word))
+    {
+        uniqueWords.Append(word + ' ');
+    }
+}
+
+Console.WriteLine(uniqueWords.ToString());
+
+
+/*
 // A program that reverses a provided string
 
 Console.WriteLine("\nReversing a string\n");
@@ -27,10 +44,10 @@ for (int i = reversed.Length - 1;i >= 0; i--)
 {
     int newIndex = reversed.Length - 1 - i;
     reversed[newIndex] = nonReversed[i];
-
 }
 
-Console.WriteLine(string.Join("", reversed));
+
+Console.WriteLine("\nReversed:\n" + string.Join("", reversed));
 
 // A program that finds the longest unbroken word in a string and prints it
 
@@ -49,4 +66,5 @@ foreach (string word in wordArray)
     }
 }
 
-Console.WriteLine($"{longestWord} is the longest word in this text");
+Console.WriteLine($"\n{longestWord} is the longest word in this text");
+*/
