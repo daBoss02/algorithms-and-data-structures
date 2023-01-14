@@ -26,7 +26,7 @@ for (int i = 0; i < input.Length; i++)
         }
     }
 }
-//string[] chars = repeatedChars.ToString().Split("");
+
 string repeatedString = repeatedChars.ToString();
 foreach (char c in repeatedString)
 {
@@ -41,7 +41,7 @@ foreach (char c in repeatedString)
         Console.Write($"'{c}', ");
     }
 }
-/*
+
 // A program returns an array of strings that are unique words found in the argument.
 
 Console.WriteLine("\nProducing an array of unique words\n");
@@ -94,4 +94,3 @@ foreach (string word in wordArray)
 }
 
 Console.WriteLine($"\n{longestWord} is the longest word in this text");
-*/
