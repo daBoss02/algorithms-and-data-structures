@@ -8,17 +8,46 @@
 
 using System.Text;
 
-string testSentence = "the the who what where where why how how";
+string testSentence = "Programmatic Python";
 
 // A program that produces an array of all of the characters that appear more than once in a string.
 
 Console.WriteLine("\nProducing an array of repeated characters\n");
 
+string input = testSentence;
+StringBuilder repeatedChars = new StringBuilder();
+for (int i = 0; i < input.Length; i++)
+{
+    for (int j = i + 1; j < input.Length; j++)
+    {
+        if (input[i] == input[j] && !repeatedChars.ToString().Contains(input[i]))
+        {
+            repeatedChars.Append(input[i]);
+        }
+    }
+}
+//string[] chars = repeatedChars.ToString().Split("");
+string repeatedString = repeatedChars.ToString();
+foreach (char c in repeatedString)
+{
+    if (repeatedString.IndexOf(c) == repeatedString.Length - 1)
+    {
+        Console.WriteLine($"'{c}']");
+    } else if (repeatedString.IndexOf(c) == 0)
+    {
+        Console.Write($"['{c}', ");
+    } else
+    {
+        Console.Write($"'{c}', ");
+    }
+}
+/*
 // A program returns an array of strings that are unique words found in the argument.
 
 Console.WriteLine("\nProducing an array of unique words\n");
 
-string[] allWords = testSentence.Split(' ');
+Console.WriteLine("Please input a phrase");
+string[] allWords = Console.ReadLine().Split(' ');
 StringBuilder uniqueWords = new StringBuilder();
 
 foreach (string word in allWords)
@@ -31,8 +60,6 @@ foreach (string word in allWords)
 
 Console.WriteLine(uniqueWords.ToString());
 
-
-/*
 // A program that reverses a provided string
 
 Console.WriteLine("\nReversing a string\n");
