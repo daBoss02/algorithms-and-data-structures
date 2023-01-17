@@ -25,7 +25,7 @@ Console.WriteLine("Duplicated Numbers:");
 Console.WriteLine(String.Join(", ", doubles));
 
 // We have two sorted int arrays which could be with different sizes. We need to merge them in a third array while keeping this result array sorted. Can you do that in O(n) time? Don't use any extra structures like Sets or Dictionaries
-
+// I don't think it's possible because you have to iterate over the number you want to sort, and then iterate over the numbers before it until you find the right place
 Console.WriteLine("\nCombining and Sorting 2 int arrays\n");
 int[] intArray1 = new int[] { 1, 2, 3, 4, 5 };
 int[] intArray2 = new int[] { 2, 5, 7, 9, 13 };
@@ -56,6 +56,7 @@ foreach (int i in combined)
 }
 
 // Given an integer, reverse the digits of that integer, e. g. input is 3415, output is 5143. What is the time complexity of your solution?
+// Time Complexity of O(n)
 
 Console.WriteLine("\nReversing a number\n");
 Console.WriteLine("\nPlease input a number to be reversed\n");
