@@ -16,8 +16,8 @@ numsList.Add(new List<int>() { 2, 1, 2 });
 
 List<int> MaxNumbersInLists(List<List<int>> numLists)
 {
-    // O(n)^2
     List<int> maxNums = new List<int>();
+    // O(n) because each value is only being iterated over once
     for (int i = 0; i < numLists.Count; i++)
     {
         int maxNum = 0;
@@ -51,10 +51,12 @@ List<List<int>> grades = new List<List<int>>() ;
 grades.Add(new List<int> { 85, 92, 67, 94, 94 });
 grades.Add(new List<int> { 50, 60, 57, 95 });
 grades.Add(new List<int> { 95 });
+
 String HighestGrade(List<List<int>> gradesList)
 {
     List<int> courses = new List<int>();
     int highestGrade = 0;
+    // O(n) because I am only iterating over each value once
     for (int i = 0; i < gradesList.Count; i++)
     {
         foreach (int num in gradesList[i])
@@ -85,6 +87,8 @@ List<int> randomNums = new List<int>() { 47, -98, -12, 13, 2, 10 };
 
 List<int> OrderByLooping(List<int> intList)
 {
+    // O(n)^x I'm not totally sure what the complexity would be as each number is iterated over a different
+    // amount of times
     for (int i = 1; i < intList.Count; i++)
     {
         int previous = intList[i - 1];
